@@ -1,0 +1,38 @@
+# Welcome to Sonic Pi
+
+use_bpm 244
+use_synth :prophet
+live_loop :main do
+  i = 0
+  510510.times do
+    sleep 1
+    i = i+1
+    if factor?(i,2)
+      play :G2
+    end
+    if factor?(i,3)
+      play :F4
+    end
+    if factor?(i,5)
+      play :C3
+    end
+    if factor?(i,7)
+      play :A5
+    end
+    if factor?(i,11)
+      play :D1
+    end
+    if factor?(i,13)
+      play :B6
+    end
+    if factor?(i,17)
+      play :E4
+    end
+  end
+  
+end
+
+
+
+
+
