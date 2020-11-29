@@ -1,0 +1,37 @@
+
+live_loop :main do
+  use_bpm (245*10)
+  use_synth :subpulse
+  i = 0
+  510510.times do
+    sleep 1
+    i = i+1
+    if factor?(i,20)
+      play :G2,attack: 2, release: 3
+    end
+    if factor?(i,30)
+      play :F4, attack: 2,release: 4
+    end
+    if factor?(i,50)
+      play :C3, attack: 2,release: 6
+    end
+    if factor?(i,70)
+      play :A4, attack: 2,release: 8
+    end
+    if factor?(i,110)
+      play :D2, attack: 2,release: 12
+    end
+    if factor?(i,130)
+      play :B5, attack: 2,release: 14
+    end
+    if factor?(i,170)
+      play :E4, attack: 2,release: 18
+    end
+    if factor?(i,190)
+      play :D4, attack: 2,release: 20
+      play :B2, attack: 2,release: 20
+    end
+  end
+end
+
+
